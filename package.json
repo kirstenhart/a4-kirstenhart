@@ -1,0 +1,22 @@
+{
+  "name": "three-js",
+  "version": "0.0.1",
+  "description": "Three.js Demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "stats": "^1.0.0",
+    "three": "^0.121.1"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "license": "MIT"
+}
