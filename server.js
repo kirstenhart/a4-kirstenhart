@@ -1,19 +1,12 @@
-// server.js
-// where your node app starts
+const express = require('express'),
+app = express()
 
-// init project
-const express = require("express");
+app.use(function(req, res, next) {
+  console.log(req.url)
+  next()
+})
 
-const app = express();
-app.use(express.json());
+//middleware
+app.use(express.static('./'))
 
-app.use(express.static("public"));
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html");
-});
-
-// listen for requests :)
-const port = process.env.PORT;
-var listener = app.listen(port, function () {
-  console.log('Your app is listening on port ' + listener.address().port);
-});
+app.listen(3000)
